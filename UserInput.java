@@ -16,12 +16,24 @@ class UserInput{
 
 	}
 
-	int [] userInput1(){
-		Scanner scan = new Scsnner(System.in);
-		int number = new int;
+	int userInput1(){
+		Scanner scan = new Scanner(System.in);
+		int num ;
 
 		System.out.println("Enter a number :");
-		number = scan.nextInt();
-		return number;
+		num = scan.nextInt();
+		return num;
+	}
+
+	int [] userInput2(int x){
+		Scanner scan = new Scanner(System.in);
+		int[] numbers1 = new int[x];
+
+		for(int i = 0;i < x;i++){
+			System.out.println("Enter number "+ (i+1) + " :");
+			numbers1[i] = scan.nextInt();
+
+		}
+		return numbers1;
 	}
 }
